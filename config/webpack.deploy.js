@@ -18,7 +18,8 @@ function copyResolver() {
 
 module.exports = (env) => {
     // Get game name from Manifest
-    let gameUrl = package.game.url; //process.env.npm_package_name;
+   // let gameUrl = package.game.url; //process.env.npm_package_name;
+   let gameUrl =educational-game-project-matt-vermont-and-daniel-warszawski;
     // Get endpoint
     let endpoint = env.endpoint;
 

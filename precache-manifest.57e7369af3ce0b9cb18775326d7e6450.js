@@ -1,5 +1,9 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
+    "revision": "da6f566b0b41cda2831bc43dbd69a0c4",
+    "url": "assets/PipeWithRing.PNG"
+  },
+  {
     "revision": "fa6b1dfa88eea1fd3d061fde5e775d85",
     "url": "assets/WorkInProgress.PNG"
   },
@@ -28,12 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/correctScreen.PNG"
   },
   {
-    "revision": "0777b20b5259fbbcf9ceb90333eff476",
+    "revision": "18561a1ab8fff8eedb1765b8223569cb",
     "url": "assets/data/questions.json"
-  },
-  {
-    "revision": "ccd0f68c9dc7cd68ea1e98bf43aa7c90",
-    "url": "assets/data/ship.png"
   },
   {
     "revision": "9d79a2ec01455afa082d23e42f457801",
@@ -84,15 +84,27 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/images/ship3.png"
   },
   {
-    "revision": "4ce104aecacac5751ae1c13f1715714a",
+    "revision": "3d6a3b23195810fbe2ea966c65275c9a",
     "url": "assets/images_questions/Level1Q1.PNG"
   },
   {
-    "revision": "8197da82852ef7e765bb1666a7c51ea5",
+    "revision": "1a4590b5870a6c7655aecd3fa9337e0d",
+    "url": "assets/images_questions/Level1Q1v2.PNG"
+  },
+  {
+    "revision": "9ec0498fdea8dbfe02d79f3cd722fa2a",
     "url": "assets/images_questions/Level1Q2.PNG"
   },
   {
-    "revision": "95590e36444a657a21845ff6a7ee03a9",
+    "revision": "b613c2b90e1b64132339ae41b984f319",
+    "url": "assets/images_questions/Level1Q2v2.png"
+  },
+  {
+    "revision": "74e9dd1897010c08168779c43d720348",
+    "url": "assets/images_questions/Level1Q2v3.PNG"
+  },
+  {
+    "revision": "909b38c564b30a0d823e9307b8439b48",
     "url": "assets/images_questions/Level1Q3.PNG"
   },
   {
@@ -104,7 +116,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/levelComplete.PNG"
   },
   {
-    "revision": "2d0622b9659e0e0b1fadd5912957e172",
+    "revision": "4c510e1c2aa40a315a5656975005bec6",
     "url": "assets/ninetyDegreeButton.PNG"
   },
   {
@@ -112,7 +124,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/ninetyDegreeStraightPipe.PNG"
   },
   {
-    "revision": "c782f76b5fe87ca5e7338bc8b73aaa98",
+    "revision": "b5fde6d23923408235167969519095fd",
     "url": "assets/oneEightyDegreeButton.PNG"
   },
   {
@@ -176,12 +188,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/spritesheets/ship3.png"
   },
   {
+    "revision": "082dade72d3e53ef6a8f53ca6f16362d",
+    "url": "assets/submitButton.png"
+  },
+  {
+    "revision": "c04f9162d3cc37b5deb03b2a4be32ef4",
+    "url": "assets/twoSeventyDegreeButton.PNG"
+  },
+  {
     "revision": "9a2b4a66d7e58f5d12caf37d52ec8df8",
     "url": "assets/wrongScreen.PNG"
   },
   {
-    "revision": "9551a88ada19eede798ba578a21df2c4",
-    "url": "assets/zeroDegreeButton.PNG"
+    "revision": "f18f15c7c648b52b425e3be6734ab44d",
+    "url": "assets/zeroDegreeButton.png"
   },
   {
     "revision": "7ee66202da93da8f51b78c801eacb45d",
@@ -192,12 +212,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "favicon.ico"
   },
   {
-    "revision": "59447e9a6491132db44ed13a11375c4d",
+    "revision": "ca16ed7c0fa6fa0fec4ccb397b55deb6",
     "url": "index.html"
   },
   {
-    "revision": "f40527858873678be18a",
-    "url": "main.24bf7b1cd4ab5d20d505.bundle.js"
+    "revision": "54dd36017d2fb03af263",
+    "url": "main.e100251515789de8b837.bundle.js"
   },
   {
     "revision": "7d4f61a6a14cef737c26ca7df05e842a",

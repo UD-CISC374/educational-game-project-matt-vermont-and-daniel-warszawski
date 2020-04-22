@@ -6,7 +6,7 @@
 						"0",
 						"90"
 					],
-					"answer": 0,
+					"answer": 2,
 					"image": "assets/images_questions/Level1Q1.PNG",
 					"answer_image": "Level1Q1.png"
 				},
@@ -16,12 +16,12 @@
                         "0",
                         "90"					
                     ],
-					"answer": 1,
+					"answer": 3,
 					"image": "assets/images_questions/Level1Q2.PNG",
 					"answer_image": "WorkInProgress.PNG"
 				},
 				{
-					"question": "This is the 2nd question of level 1",
+					"question": "This is the 3rd question of level 1",
 					"choices": [
                         "0",
                         "90"					

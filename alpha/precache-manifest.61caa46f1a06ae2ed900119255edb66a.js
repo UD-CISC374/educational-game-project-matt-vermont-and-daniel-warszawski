@@ -84,6 +84,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/educational-game-project-matt-vermont-and-daniel-warszawski/alphaassets/images/ship3.png"
   },
   {
+    "revision": "f18f15c7c648b52b425e3be6734ab44d",
+    "url": "/educational-game-project-matt-vermont-and-daniel-warszawski/alphaassets/images/zeroDegButton.PNG"
+  },
+  {
     "revision": "3d6a3b23195810fbe2ea966c65275c9a",
     "url": "/educational-game-project-matt-vermont-and-daniel-warszawski/alphaassets/images_questions/Level1Q1.PNG"
   },
@@ -212,15 +216,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/educational-game-project-matt-vermont-and-daniel-warszawski/alphafavicon.ico"
   },
   {
-    "revision": "8b40404cd79db4eb8f7b",
-    "url": "/educational-game-project-matt-vermont-and-daniel-warszawski/alphagen.main.3c0243670f084616c171.bundle.js"
+    "revision": "ed730c1fd65d73971eac",
+    "url": "/educational-game-project-matt-vermont-and-daniel-warszawski/alphagen.main.cf34d5809cb80abff9a1.bundle.js"
   },
   {
     "revision": "8857aeb5de5dfb8b65cf",
     "url": "/educational-game-project-matt-vermont-and-daniel-warszawski/alphagen.vendors.a830139833da967256f6.bundle.js"
   },
   {
-    "revision": "e1f5efe16d1e2697cc541033ff6305ad",
+    "revision": "d0d116b99fd05e3025e5a5538b170932",
     "url": "/educational-game-project-matt-vermont-and-daniel-warszawski/alphaindex.html"
   },
   {

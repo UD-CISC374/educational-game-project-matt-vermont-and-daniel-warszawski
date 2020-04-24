@@ -84,6 +84,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/images/ship3.png"
   },
   {
+    "revision": "f18f15c7c648b52b425e3be6734ab44d",
+    "url": "assets/images/zeroDegButton.PNG"
+  },
+  {
     "revision": "3d6a3b23195810fbe2ea966c65275c9a",
     "url": "assets/images_questions/Level1Q1.PNG"
   },
@@ -212,12 +216,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "favicon.ico"
   },
   {
-    "revision": "5343e0ff8f455298e738f4f620853808",
+    "revision": "df36830613672a6a401d5d3a960ef236",
     "url": "index.html"
   },
   {
-    "revision": "fa4a9c42e96506410ff2",
-    "url": "main.6deb7f0e9b34e447bff9.bundle.js"
+    "revision": "d4b1fc7e94b77017ca58",
+    "url": "main.27e46df0605ecbe27ec0.bundle.js"
   },
   {
     "revision": "7d4f61a6a14cef737c26ca7df05e842a",

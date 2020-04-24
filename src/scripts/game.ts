@@ -8,6 +8,7 @@ import Level3Scene from './scenes/level3Scene';
 import CorrectScreen from './scenes/correctScreen';
 import WrongScreen from './scenes/wrongScreen';
 import EndScreen from './scenes/endScreen';
+import TutorialScene from './scenes/tutorialScene';
 
 import GameConfig = Phaser.Types.Core.GameConfig;
 
@@ -24,7 +25,7 @@ const config: GameConfig = {
         width: DEFAULT_WIDTH,
         height: DEFAULT_HEIGHT
     },
-    scene: [PreloadScene, SelectionScene, Level1Scene, Level2Scene, Level3Scene, 
+    scene: [PreloadScene, TutorialScene, SelectionScene, Level1Scene, Level2Scene, Level3Scene, 
             CorrectScreen, WrongScreen, EndScreen],//MainScene],
     physics: {
         default: 'arcade',

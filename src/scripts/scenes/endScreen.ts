@@ -16,13 +16,12 @@ export default class EndScreen extends Phaser.Scene {
     }
 
     create() {    
-    console.log("lynn");
     this.levelComplete = this.add.image(this.scale.width / 2, this.scale.height / 2 - 110, "levelComplete"); 
     this.levelComplete.setScale(.4); 
     this.add.text(this.scale.width / 100 , this.scale.height / 2 + 110, 
         "You got " + this.numCorrect + " out of " + this.totalQuestions + " correct", {fill : "red" });
     this.time.addEvent({
-        delay: 5000,       
+        delay: 4000,       
         callback: () => this.scene.start('SelectionScene'),
         loop: true
     })

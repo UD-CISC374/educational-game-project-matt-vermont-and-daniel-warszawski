@@ -216,15 +216,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/educational-game-project-matt-vermont-and-daniel-warszawski/alphafavicon.ico"
   },
   {
-    "revision": "b59c337a7d7cfd015395",
-    "url": "/educational-game-project-matt-vermont-and-daniel-warszawski/alphagen.main.e6582a6e5508dc55f51d.bundle.js"
+    "revision": "a2867f246d2c4ee96305",
+    "url": "/educational-game-project-matt-vermont-and-daniel-warszawski/alphagen.main.f8d276a69b49a67e8d24.bundle.js"
   },
   {
     "revision": "8857aeb5de5dfb8b65cf",
     "url": "/educational-game-project-matt-vermont-and-daniel-warszawski/alphagen.vendors.a830139833da967256f6.bundle.js"
   },
   {
-    "revision": "f722e0356f607c4c952baad5526b0099",
+    "revision": "756e3030e26cca10acc7f747971ca9c0",
     "url": "/educational-game-project-matt-vermont-and-daniel-warszawski/alphaindex.html"
   },
   {

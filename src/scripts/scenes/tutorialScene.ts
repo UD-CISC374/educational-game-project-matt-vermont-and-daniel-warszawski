@@ -20,6 +20,7 @@ export default class TutorialScene extends Phaser.Scene {
 
 
     create() {    
+        console.log("tutorial");
         this.answer = 0;
         this.btn0DegClicked = false;
         this.btn90DegClicked = false;

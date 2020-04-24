@@ -9,7 +9,7 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image('ninetyDegreeStraightPipe', 'assets/ninetyDegreeStraightPipe.PNG');
     this.load.image('zeroDegreeStraightPipe', 'assets/zeroDegreeStraightPipe.PNG');
     this.load.image('ninetyDegreeButton', 'assets/ninetyDegreeButton.PNG');
-    this.load.image('zeroDegreeButton', 'assets/zeroDegreeButton.PNG');
+    this.load.image('zeroDegreeButton', 'assets/zeroDegreeButton.png');
     this.load.image('buttonLevel1', 'assets/buttonLevel1.PNG');
     this.load.image('buttonLevel2', 'assets/buttonLevel2.PNG');
     this.load.image('buttonLevel3', 'assets/buttonLevel3.PNG');

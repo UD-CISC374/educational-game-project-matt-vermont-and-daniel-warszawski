@@ -6,16 +6,31 @@ export default class SelectionScene extends Phaser.Scene {
     buttonLevel1 : Phaser.GameObjects.Image;
     buttonLevel2 : Phaser.GameObjects.Image;
     buttonLevel3 : Phaser.GameObjects.Image;
+    buttonTutorial : Phaser.GameObjects.Image;
+    hasDoneTutorial: boolean;
     constructor() {
       super({ key: 'SelectionScene' });
     }
-    
+
+    init(data)
+    {
+        this.hasDoneTutorial = data.hasDoneTutorial; /*Get data passed to this scene */   
+    }
+
     create() {    
+    console.log("Selection");
     this.background = this.add.image(0, 0, "background");
     this.background.setOrigin(0, 0);
     this.data = this.cache.json.get('questions');
     this.add.text(20, 20, "Select Level");
    // this.ship1 = this.add.image(this.scale.width / 2 - 50, this.scale.height / 2, "ship");
+   if (!this.hasDoneTutorial){ /*if have not done tutorial */
+    this.buttonTutorial = this.add.image(this.scale.width / 2, this.scale.height / 2 + 75, "tutorialButton");
+    this.buttonTutorial.setScale(.6);
+    this.buttonTutorial.setInteractive();
+    this.buttonTutorial.on('pointerdown', () => this.scene.start('TutorialScene', {hasDoneTutorial: false} ) ); 
+   }
+   else {
     this.buttonLevel1 = this.add.image(this.scale.width / 2 - 50, this.scale.height / 2 + 75, "buttonLevel1");
     this.buttonLevel1.setScale(.25);
     this.buttonLevel1.setInteractive();
@@ -29,9 +44,8 @@ export default class SelectionScene extends Phaser.Scene {
     this.buttonLevel3 = this.add.image(this.scale.width / 2 + 50, this.scale.height / 2 + 75, "buttonLevel3");
     this.buttonLevel3.setScale(.25);
     this.buttonLevel3.setInteractive();
-    this.buttonLevel3.on('pointerdown', () => this.scene.start('Level3Scene') );
-
-    
+    this.buttonLevel3.on('pointerdown', () => this.scene.start('Level3Scene') ); 
+  }   
 }
   
     update() {

@@ -21,6 +21,8 @@ export default class Level1Scene extends Phaser.Scene {
   roatePipe;
   roateDegree : integer;
   rotateInterval : integer;
+  mario_lose;
+  mario_haha;
   constructor() {
     super({ key: 'Level1Scene' });
 }
@@ -40,7 +42,9 @@ export default class Level1Scene extends Phaser.Scene {
         }
     }
 
-  create() {     
+  create() {
+    this.mario_lose = this.sound.add('mario_lose');
+    this.mario_haha = this.sound.add('mario_haha');     
     this.roateDegree = 0;
     this.rotateInterval = 90;
     this.add.text(this.scale.width / 100 , 5, "Rotate Pipe and Submit!", {fill : "blue" });
@@ -116,12 +120,15 @@ export default class Level1Scene extends Phaser.Scene {
         */
 
 }
+
   buttonPress(){
     if ( this.roateDegree == (this.rotateInterval * this.answerIndex) ){
+      this.mario_haha.play();
        this.scene.start('CorrectScreen', 
       {currentQuestionIndex: ++this.currentQuestionIndex, numCorrect: ++this.numCorrect, totalQuestions: this.totalQuestions}) ;
     }
     else {
+      this.mario_lose.play();
       this.scene.start('WrongScreen',
       {currentQuestionIndex: ++this.currentQuestionIndex, numCorrect: this.numCorrect, totalQuestions: this.totalQuestions}); 
     }    

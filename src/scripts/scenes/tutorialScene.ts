@@ -13,11 +13,16 @@ export default class TutorialScene extends Phaser.Scene {
     btn180DegClicked : boolean;
     btn270DegClicked : boolean;
     answer: integer;
+    instructions;
+    hasDoneTutorial : boolean;
 
     constructor() {
       super({ key: 'TutorialScene' });
     }
-
+    init(data)
+    {
+        this.hasDoneTutorial = data.hasDoneTutorial; /*Get data passed to this scene */   
+    }
 
     create() {    
         console.log("tutorial");
@@ -27,7 +32,8 @@ export default class TutorialScene extends Phaser.Scene {
         this.btn180DegClicked = false;
         this.btn270DegClicked = false;
 
-        this.add.text(this.scale.width / 100 , 5, "Click 0, 90, 180, 270", {fill : "blue" });
+        this.instructions = this.add.text(this.scale.width / 100 , 20, "Click 0, 90, 180, 270", {fill : "blue" });
+        this.add.text(this.scale.width / 2 - 50 , 5, "Tutorial", {fill : "purple" });
 
         this.roatePipe = this.add.image(this.scale.width / 2 - 18, this.scale.height / 2 + 110, "pipeWithRing");
         this.roatePipe.setScale(.1); 
@@ -64,6 +70,7 @@ export default class TutorialScene extends Phaser.Scene {
   buttonDown(){
     if ( this.btn0DegClicked && this.btn90DegClicked && this.btn180DegClicked && this.btn270DegClicked ) {
         this.sampleQuestion = this.add.image(0,0 , "sampleQuestion");
+        this.instructions.destroy();
         this.sampleQuestion.setOrigin(0, 0);
         this.submitButton = this.add.image(this.scale.width/2, this.scale.height /2 + 50, 'submitButton');
         this.submitButton.setScale(.2);
@@ -75,7 +82,7 @@ export default class TutorialScene extends Phaser.Scene {
 }  
     submit(){
         if (this.roateDegree == this.answer){
-            this.scene.start('SelectionScene');
+            this.scene.start('SelectionScene', {hasDoneTutorial: true} )
             }
         
     }

@@ -164,6 +164,26 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/sounds/sci-fi_platformer12.ogg"
   },
   {
+    "revision": "057b5d11cdc43b3696cf61616460e263",
+    "url": "assets/sounds/sm64_game_over.wav"
+  },
+  {
+    "revision": "03353b4fc19c6d87931a92135bf23947",
+    "url": "assets/sounds/sm64_mario_haha.wav"
+  },
+  {
+    "revision": "40938e2360c54268343d5bafcb9ba195",
+    "url": "assets/sounds/sm64_mario_hurt.wav"
+  },
+  {
+    "revision": "723cadff732722a4a4a4c12fa3f42dd2",
+    "url": "assets/sounds/sm64_mario_thank_you.wav"
+  },
+  {
+    "revision": "ee51f29228c0dd1724a66977ba4e9b16",
+    "url": "assets/sounds/sm64_mario_yippee.wav"
+  },
+  {
     "revision": "6be3462bcaa4a183b678800bb66d176c",
     "url": "assets/spritesheets/beam.png"
   },
@@ -196,6 +216,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/submitButton.png"
   },
   {
+    "revision": "3e9e7ecf7ff5079b8e5e85d93f6cfc78",
+    "url": "assets/tutorialButton.PNG"
+  },
+  {
     "revision": "c04f9162d3cc37b5deb03b2a4be32ef4",
     "url": "assets/twoSeventyDegreeButton.PNG"
   },
@@ -216,12 +240,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "favicon.ico"
   },
   {
-    "revision": "d99ac6d5181a0651ac3ea651bd429932",
+    "revision": "d6a68cb81a83afaf1a1b62230095e520",
     "url": "index.html"
   },
   {
-    "revision": "6177fa69501b00c5531a",
-    "url": "main.c38a07a5d8690a5c1f37.bundle.js"
+    "revision": "ac9e9cc1de7a20492d09",
+    "url": "main.4784d420d353803c4bf3.bundle.js"
   },
   {
     "revision": "7d4f61a6a14cef737c26ca7df05e842a",

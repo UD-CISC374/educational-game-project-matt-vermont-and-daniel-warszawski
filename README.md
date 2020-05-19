@@ -9,6 +9,7 @@ The player should select the tutorial first.  Going through the tutorial will ge
 # large image
  ![Alt text](./screenshots/large.jpg)
   ![Alt text](./assets/screenshots/large.jpg)
+    ![Alt text](./src/assets/screenshots/large.jpg)
   ![Alt text](./screenshots/large.png)
  
  

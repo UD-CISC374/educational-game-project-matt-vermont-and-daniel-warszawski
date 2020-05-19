@@ -5,14 +5,14 @@ export default class TutorialScene extends Phaser.Scene {
     button180Deg : Phaser.GameObjects.Image;
     button270Deg : Phaser.GameObjects.Image;
     submitButton : Phaser.GameObjects.Image;
-    roatePipe : Phaser.GameObjects.Image;
+    rotatePipe : Phaser.GameObjects.Image;
     sampleQuestion : Phaser.GameObjects.Image;
     hint : Phaser.GameObjects.Image;
     back : Phaser.GameObjects.Image;
     close : Phaser.GameObjects.Image;
     text1 : Phaser.GameObjects.Text;
     msgBox : Phaser.GameObjects.Group;
-    roateDegree : integer;
+    rotateDegree : integer;
     btn0DegClicked : boolean;
     btn90DegClicked : boolean;
     btn180DegClicked : boolean;
@@ -46,8 +46,8 @@ export default class TutorialScene extends Phaser.Scene {
         this.instructions = this.add.text(25 , 90, "Click 0, 90, 180, 270", {fill : "blue" });
         this.add.text(this.scale.width / 2 - 50 , 5, "Tutorial", {fill : "purple" });
 
-        this.roatePipe = this.add.image(this.scale.width / 2 - 18, this.scale.height / 2 + 10, "pipeWithRing");
-        this.roatePipe.setScale(.1); 
+        this.rotatePipe = this.add.image(this.scale.width / 2 - 18, this.scale.height / 2 + 10, "pipeWithRing");
+        this.rotatePipe.setScale(.1); 
         
         this.hint = this.add.image(10, this.scale.height / 2 - 60, 'hint');
         this.hint.setScale(.40);
@@ -88,14 +88,14 @@ export default class TutorialScene extends Phaser.Scene {
         this.button270Deg.on('pointerout', () => {this.button270Deg.alpha = 1} );
        
 
-        this.button0Deg.on('pointerdown', () => {this.rotatedAngle = 0, this.roatePipe.angle = 0, this.btn0DegClicked = true, this.buttonDown(),
-            this.roateDegree = 0; console.log(this.roateDegree, this.btn0DegClicked) } );
-        this.button90Deg.on('pointerdown', () => {this.rotatedAngle = 90,this.roatePipe.angle = 90, this.btn90DegClicked = true, this.buttonDown(),
-            this.roateDegree = 90; console.log(this.roateDegree, this.btn90DegClicked) } );
-        this.button180Deg.on('pointerdown', () => {this.rotatedAngle = 180, this.roatePipe.angle = 180, this.btn180DegClicked = true, this.buttonDown(),
-            this.roateDegree = 180; console.log(this.roateDegree, this.btn180DegClicked) } );
-        this.button270Deg.on('pointerdown', () => {this.rotatedAngle = 270, this.roatePipe.angle = 270, this.btn270DegClicked = true, this.buttonDown(),
-            this.roateDegree = 270; console.log(this.roateDegree, this.btn270DegClicked) } );     
+        this.button0Deg.on('pointerdown', () => {this.rotatedAngle = 0, this.rotatePipe.angle = 0, this.btn0DegClicked = true, this.buttonDown(),
+            this.rotateDegree = 0; console.log(this.rotateDegree, this.btn0DegClicked) } );
+        this.button90Deg.on('pointerdown', () => {this.rotatedAngle = 90,this.rotatePipe.angle = 90, this.btn90DegClicked = true, this.buttonDown(),
+            this.rotateDegree = 90; console.log(this.rotateDegree, this.btn90DegClicked) } );
+        this.button180Deg.on('pointerdown', () => {this.rotatedAngle = 180, this.rotatePipe.angle = 180, this.btn180DegClicked = true, this.buttonDown(),
+            this.rotateDegree = 180; console.log(this.rotateDegree, this.btn180DegClicked) } );
+        this.button270Deg.on('pointerdown', () => {this.rotatedAngle = 270, this.rotatePipe.angle = 270, this.btn270DegClicked = true, this.buttonDown(),
+            this.rotateDegree = 270; console.log(this.rotateDegree, this.btn270DegClicked) } );     
   }
   
   
@@ -120,15 +120,15 @@ export default class TutorialScene extends Phaser.Scene {
         this.add.text(this.scale.width / 100 , 20, "Line up the red sides of", {fontsize:'5px',fill : "red" });
         this.add.text(this.scale.width / 100 , 35, "the pipe and click submit", {fontsize:'5px',fill : "red" });
         this.hasDoneTutorial = true;
-        this.roatePipe.destroy();
-        this.roatePipe = this.add.image(this.scale.width - 85, this.scale.height / 2 - 25, "pipeWithRing");
-        this.roatePipe.angle = this.rotatedAngle;
-        this.roatePipe.setScale(.087); 
+        this.rotatePipe.destroy();
+        this.rotatePipe = this.add.image(this.scale.width - 85, this.scale.height / 2 - 25, "pipeWithRing");
+        this.rotatePipe.angle = this.rotatedAngle;
+        this.rotatePipe.setScale(.087); 
         }
     }
 }  
     submit(){
-        if (this.roateDegree == this.answer){
+        if (this.rotateDegree == this.answer){
             this.scene.start('SelectionScene', {hasDoneTutorial: true} )
             }
         else {

@@ -1,10 +1,7 @@
 import 'phaser';
-import MainScene from './scenes/mainScene';
 import PreloadScene from './scenes/preloadScene';
 import SelectionScene from './scenes/selectionScene';
 import Level1Scene from './scenes/level1Scene';
-import Level2Scene from './scenes/level2Scene';
-import Level3Scene from './scenes/level3Scene';
 import CorrectScreen from './scenes/correctScreen';
 import WrongScreen from './scenes/wrongScreen';
 import EndScreen from './scenes/endScreen';
@@ -25,8 +22,8 @@ const config: GameConfig = {
         width: DEFAULT_WIDTH,
         height: DEFAULT_HEIGHT
     },
-    scene: [PreloadScene, TutorialScene, SelectionScene, Level1Scene, Level2Scene, Level3Scene, 
-            CorrectScreen, WrongScreen, EndScreen],//MainScene],
+    scene: [PreloadScene, TutorialScene, SelectionScene, Level1Scene, 
+            CorrectScreen, WrongScreen, EndScreen],
     physics: {
         default: 'arcade',
         arcade: {

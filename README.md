@@ -9,9 +9,9 @@ The player should select the tutorial first.  Going through the tutorial will ge
 # large image
  ![Alt text](./screenshots/large.PNG)
   ![Alt text](./screenshots/large.png)
-  ![Alt text](./assets/screenshots/large.jpg)
-    ![Alt text](./src/assets/screenshots/large.jpg)
-  ![Alt text](./screenshots/large.png)
+  ![Alt text](./assets/screenshots/large.PNG)
+    ![Alt text](./src/assets/screenshots/large.PNG)
+  ![Alt text](./screenshots/large.PNG)
  
  
 Format: ![Alt Text](url)

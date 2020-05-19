@@ -22,6 +22,8 @@ export default class TutorialScene extends Phaser.Scene {
     counter : integer;
     instructions;
     hasDoneTutorial : boolean;
+    incorrectCounter: integer = 0;
+    rotatedAngle: integer = 0;
 
     constructor() {
       super({ key: 'TutorialScene' });
@@ -68,15 +70,34 @@ export default class TutorialScene extends Phaser.Scene {
         this.button270Deg.setScale(.48);
         this.button270Deg.setInteractive();
 
-        this.button0Deg.on('pointerdown', () => {this.roatePipe.angle = 0, this.btn0DegClicked = true, this.buttonDown(),
+        this.hint.on('pointerover', () => {this.hint.alpha = .5} );
+        this.hint.on('pointerout', () => {this.hint.alpha = 1} );
+
+        //this.button0Deg.alpha = .5;
+        this.button0Deg.on('pointerover', () => {this.button0Deg.alpha = .5} );
+        this.button0Deg.on('pointerout', () => {this.button0Deg.alpha = 1} );
+
+
+        this.button90Deg.on('pointerover', () => {this.button90Deg.alpha = .5} );
+        this.button90Deg.on('pointerout', () => {this.button90Deg.alpha = 1} );
+
+        this.button180Deg.on('pointerover', () => {this.button180Deg.alpha = .5} );
+        this.button180Deg.on('pointerout', () => {this.button180Deg.alpha = 1} );
+        
+        this.button270Deg.on('pointerover', () => {this.button270Deg.alpha = .5} );
+        this.button270Deg.on('pointerout', () => {this.button270Deg.alpha = 1} );
+       
+
+        this.button0Deg.on('pointerdown', () => {this.rotatedAngle = 0, this.roatePipe.angle = 0, this.btn0DegClicked = true, this.buttonDown(),
             this.roateDegree = 0; console.log(this.roateDegree, this.btn0DegClicked) } );
-        this.button90Deg.on('pointerdown', () => {this.roatePipe.angle = 90, this.btn90DegClicked = true, this.buttonDown(),
+        this.button90Deg.on('pointerdown', () => {this.rotatedAngle = 90,this.roatePipe.angle = 90, this.btn90DegClicked = true, this.buttonDown(),
             this.roateDegree = 90; console.log(this.roateDegree, this.btn90DegClicked) } );
-        this.button180Deg.on('pointerdown', () => {this.roatePipe.angle = 180, this.btn180DegClicked = true, this.buttonDown(),
+        this.button180Deg.on('pointerdown', () => {this.rotatedAngle = 180, this.roatePipe.angle = 180, this.btn180DegClicked = true, this.buttonDown(),
             this.roateDegree = 180; console.log(this.roateDegree, this.btn180DegClicked) } );
-        this.button270Deg.on('pointerdown', () => {this.roatePipe.angle = 270, this.btn270DegClicked = true, this.buttonDown(),
+        this.button270Deg.on('pointerdown', () => {this.rotatedAngle = 270, this.roatePipe.angle = 270, this.btn270DegClicked = true, this.buttonDown(),
             this.roateDegree = 270; console.log(this.roateDegree, this.btn270DegClicked) } );     
   }
+  
   
   buttonDown(){
     if ( this.btn0DegClicked && this.btn90DegClicked && this.btn180DegClicked && this.btn270DegClicked ) {
@@ -85,26 +106,41 @@ export default class TutorialScene extends Phaser.Scene {
         this.hint = this.add.image(10, this.scale.height / 2 - 60, 'hint');
         this.hint.setScale(.40);
         this.hint.setInteractive();
-        this.hint.on('pointerdown', () => this.giveHint("Click a button", this.scale.width * .7, this.scale.height * .5));
+        this.hint.on('pointerover', () => {this.hint.alpha = .5} );
+        this.hint.on('pointerout', () => {this.hint.alpha = 1} );
+        this.hint.on('pointerdown', () => this.giveHint("Click the 0 button", this.scale.width * .7, this.scale.height * .5));
         this.instructions.destroy();
         this.sampleQuestion.setOrigin(0, 0);
         this.submitButton = this.add.image(this.scale.width/2, this.scale.height /2 + 50, 'submitButton');
         this.submitButton.setScale(.2);
         this.submitButton.setInteractive(); 
+        this.submitButton.on('pointerover', () => {this.submitButton.alpha = .5} );
+        this.submitButton.on('pointerout', () => {this.submitButton.alpha = 1} );
         this.submitButton.on('pointerdown', () => this.submit() );
         this.add.text(this.scale.width / 100 , 20, "Line up the red sides of", {fontsize:'5px',fill : "red" });
         this.add.text(this.scale.width / 100 , 35, "the pipe and click submit", {fontsize:'5px',fill : "red" });
         this.hasDoneTutorial = true;
         this.roatePipe.destroy();
         this.roatePipe = this.add.image(this.scale.width - 85, this.scale.height / 2 - 25, "pipeWithRing");
+        this.roatePipe.angle = this.rotatedAngle;
         this.roatePipe.setScale(.087); 
-    }
+        }
     }
 }  
     submit(){
         if (this.roateDegree == this.answer){
             this.scene.start('SelectionScene', {hasDoneTutorial: true} )
             }
+        else {
+            if (this.incorrectCounter == 0){
+            this.add.text(this.scale.width/2 - 40 , this.scale.height - 200, "Incorrect", {fontsize:'5px',fill : "red" });
+            this.add.text(this.scale.width/2 - 40 , this.scale.height - 200, "Incorrect", {fontsize:'5px',fill : "red" });
+            this.add.text(this.scale.width/2 - 40 , this.scale.height - 200, "Incorrect", {fontsize:'5px',fill : "red" });
+            this.add.text(this.scale.width/2 - 40 , this.scale.height - 200, "Incorrect", {fontsize:'5px',fill : "red" });
+            this.add.text(this.scale.width/2 - 40 , this.scale.height - 200, "Incorrect", {fontsize:'5px',fill : "red" });
+            this.incorrectCounter = 1;
+            }
+        }
         
     }
 

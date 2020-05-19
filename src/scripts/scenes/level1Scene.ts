@@ -144,9 +144,6 @@ export default class Level1Scene extends Phaser.Scene {
     }    
   }
 
-  update() {
-    
-  }
 
   giveHint(text, w = 300, h = 300){
     //just in case the message box already exists

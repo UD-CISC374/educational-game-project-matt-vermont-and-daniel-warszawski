@@ -28,6 +28,8 @@ export default class SelectionScene extends Phaser.Scene {
     this.buttonTutorial = this.add.image(this.scale.width / 2, this.scale.height / 2 + 75, "tutorialButton");
     this.buttonTutorial.setScale(.6);
     this.buttonTutorial.setInteractive();
+    this.buttonTutorial.on('pointerover', () => {this.buttonTutorial.alpha = .5} );
+    this.buttonTutorial.on('pointerout', () => {this.buttonTutorial.alpha = 1} );
     this.buttonTutorial.on('pointerdown', () => this.scene.start('TutorialScene', {hasDoneTutorial: false} ) ); 
    }
    else {

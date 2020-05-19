@@ -129,7 +129,7 @@ This game is for one player, they type with the keyboard.
 
 ## Storyboarding
 
- ![Alt text](./images/EducationalGameDevStoryboarding.jpg)
+ ![Alt text](./src/assets/images/EducationalGameDevStoryboarding.jpg)
 
 -*Note in 2a, an F is marked on the front of the pipe to distinguish between 90 and 180 degrees.*
 -*Note in 2b the rectangle directly above the word “Please” is a textfield.*

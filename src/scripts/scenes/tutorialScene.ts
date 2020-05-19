@@ -18,6 +18,7 @@ export default class TutorialScene extends Phaser.Scene {
     btn180DegClicked : boolean;
     btn270DegClicked : boolean;
     answer: integer;
+    counter : integer;
     instructions;
     hasDoneTutorial : boolean;
 
@@ -32,6 +33,7 @@ export default class TutorialScene extends Phaser.Scene {
     create() {    
         console.log("tutorial");
         this.answer = 0;
+        this.counter = 0;
         this.btn0DegClicked = false;
         this.btn90DegClicked = false;
         this.btn180DegClicked = false;
@@ -43,15 +45,20 @@ export default class TutorialScene extends Phaser.Scene {
         this.roatePipe = this.add.image(this.scale.width / 2 - 18, this.scale.height / 2 + 10, "pipeWithRing");
         this.roatePipe.setScale(.1); 
         
+        this.hint = this.add.image(10, this.scale.height / 2 - 60, 'hint');
+        this.hint.setScale(.40);
+        this.hint.setInteractive();
+        this.hint.on('pointerdown', () => this.giveHint("Click a button below", this.scale.width * .7, this.scale.height * .5));
+
         this.button0Deg = this.add.image(15, this.scale.height / 2 + 110, "zeroDegreeButton");
         this.button0Deg.setScale(.5);
         this.button0Deg.setInteractive();
         
-        this.button90Deg = this.add.image(60 , this.scale.height / 2 + 110 , "ninetyDegreeButton");
+        this.button90Deg = this.add.image(75 , this.scale.height / 2 + 110 , "ninetyDegreeButton");
         this.button90Deg.setScale(.48);
         this.button90Deg.setInteractive();
 
-        this.button180Deg = this.add.image(this.scale.width - 90, this.scale.height /2 + 110, 'oneEightyDegreeButton');
+        this.button180Deg = this.add.image(this.scale.width - 105, this.scale.height /2 + 110, 'oneEightyDegreeButton');
         this.button180Deg.setScale(.48);
         this.button180Deg.setInteractive();
 
@@ -75,7 +82,7 @@ export default class TutorialScene extends Phaser.Scene {
         this.hint = this.add.image(10, this.scale.height / 2 - 60, 'hint');
         this.hint.setScale(.40);
         this.hint.setInteractive();
-        this.hint.on('pointerdown', () => this.giveHint("This gives you a hint!", this.scale.width * .7, this.scale.height * .5));
+        this.hint.on('pointerdown', () => this.giveHint("Click a button", this.scale.width * .7, this.scale.height * .5));
         this.instructions.destroy();
         this.sampleQuestion.setOrigin(0, 0);
         this.submitButton = this.add.image(this.scale.width/2, this.scale.height /2 + 50, 'submitButton');
@@ -84,6 +91,10 @@ export default class TutorialScene extends Phaser.Scene {
         this.submitButton.on('pointerdown', () => this.submit() );
         this.add.text(this.scale.width / 100 , 20, "Line up the red sides of", {fontsize:'5px',fill : "red" });
         this.add.text(this.scale.width / 100 , 35, "the pipe and click submit", {fontsize:'5px',fill : "red" });
+        this.roatePipe.destroy();
+        this.roatePipe = this.add.image(this.scale.width - 85, this.scale.height / 2 - 25, "pipeWithRing");
+        this.roatePipe.setScale(.087); 
+
     }
 }  
     submit(){
@@ -94,22 +105,23 @@ export default class TutorialScene extends Phaser.Scene {
     }
 
     giveHint(text, w = 300, h = 300){
-        //just in case the message box already exists
-        //destroy it
-        if (this.msgBox) {
-            this.msgBox.destroy();
-        }
-        //make a group to hold all the elements
-        this.msgBox = this.add.group();
-            //make the back of the message box
-        this.back = this.add.image(0, 0, "hintBack");
-        this.back.setScale(.1);
-            //make the close button
-        this.close = this.add.image(0, 0, "close");
-        this.close.setScale(.3);
-            //make a text field
-        this.text1 = this.add.text(0, 0, text);
-            //set the textfeild to wrap if the text is too long
+        if(this.counter % 2 == 0){
+            //just in case the message box already exists
+            //destroy it
+            if (this.msgBox) {
+                this.msgBox.destroy();
+            }
+            //make a group to hold all the elements
+            this.msgBox = this.add.group();
+                //make the back of the message box
+            this.back = this.add.image(0, 0, "hintBack");
+            this.back.setScale(.1);
+                //make the close button
+            this.close = this.add.image(0, 0, "close");
+            this.close.setScale(.3);
+                //make a text field
+            this.text1 = this.add.text(0, 0, text, {fill : "green"});
+                //set the textfeild to wrap if the text is too long
         //text1.wordWrap = true;
             //make the width of the wrap 90% of the width 
             //of the message box
@@ -118,35 +130,41 @@ export default class TutorialScene extends Phaser.Scene {
             //
             //set the width and height passed
             //in the parameters
-        this.back.width = w;
-        this.back.height = h;
+            this.back.width = w;
+            this.back.height = h;
             //
             //
             //
             //add the elements to the group
-        this.msgBox.add(this.back);
-        this.msgBox.add(this.close);
-        this.msgBox.add(this.text1);
+            this.msgBox.add(this.back);
+            this.msgBox.add(this.close);
+            this.msgBox.add(this.text1);
             //
             //set the close button
             //in the center horizontally
             //and near the bottom of the box vertically
-        this.close.x = this.back.width / 2 - this.close.width / 2;
-        this.close.y = this.back.height - this.close.height;
+            this.close.x = this.back.width / 2 - this.close.width / 2;
+            this.close.y = this.back.height - this.close.height;
             //enable the button for input
-        this.close.setInteractive();
+            this.close.setInteractive();
             //add a listener to destroy the box when the button is pressed
-        this.close.on('pointerdown', () => this.hideBox());
+            this.close.on('pointerdown', () => this.hideBox());
             //
             //
             //set the message box in the center of the screen
         //this.msgBox.setOrigin(this.scale.width / 2, this.scale.height / 2);
             //
             //set the text in the middle of the message box
-        this.text1.x = this.back.width / 2 - this.text1.width / 2;
-        this.text1.y = this.back.height / 2 - this.text1.height / 2;
+            this.text1.x = this.button0Deg.x - 10;
+            this.text1.y = this.button0Deg.y - 35;
             //make a state reference to the messsage box
         //this.msgBox = msgBox;
+        
+        }
+        else{
+            this.text1.text = "";
+        }
+        this.counter += 1;        
     }
 
     hideBox() {

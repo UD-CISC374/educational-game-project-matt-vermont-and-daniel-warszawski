@@ -28,6 +28,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/citations.md"
   },
   {
+    "revision": "0300b7e0ea6300f48edb1050830a91d7",
+    "url": "assets/close.jpg"
+  },
+  {
     "revision": "98494259bc1962874bf8056337e5918f",
     "url": "assets/correctScreen.PNG"
   },
@@ -42,6 +46,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "38c02ad8ccaf9579150bb10d283e2b0c",
     "url": "assets/font/font.xml"
+  },
+  {
+    "revision": "6367d367f2dcbff8c46894b25e557b86",
+    "url": "assets/hint.jpg"
+  },
+  {
+    "revision": "d36d989a1d7c5989c4a47243dc38d56e",
+    "url": "assets/hintBack.png"
   },
   {
     "revision": "53cefca2a0f75654486b180949686165",
@@ -240,12 +252,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "favicon.ico"
   },
   {
-    "revision": "d6a68cb81a83afaf1a1b62230095e520",
+    "revision": "534a28c5b079da8d24fcc16d0a89e44d",
     "url": "index.html"
   },
   {
-    "revision": "ac9e9cc1de7a20492d09",
-    "url": "main.4784d420d353803c4bf3.bundle.js"
+    "revision": "4356a814652f17ce22b3",
+    "url": "main.7b78ce2b4c8b3e1baeef.bundle.js"
   },
   {
     "revision": "7d4f61a6a14cef737c26ca7df05e842a",

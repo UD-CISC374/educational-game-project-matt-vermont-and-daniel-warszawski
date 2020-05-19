@@ -7,8 +7,8 @@ This game teaches the important concept of angles to the user through a series o
 The player should select the tutorial first.  Going through the tutorial will get the user comfortable with the gameplay.  After completing the tuorial the user is ready for level 1.  The user should click the 0, 90, 180 or 270 button in order to orient the missing pipe piece in the desired way and then click submit.
 
 # large image
- ![Alt text](./images/large.jpg)
-  ![Alt text](./images/large.png)
+ ![Alt text](./screenshots/large.jpg)
+  ![Alt text](./screenshots/large.png)
  
  
 Format: ![Alt Text](url)

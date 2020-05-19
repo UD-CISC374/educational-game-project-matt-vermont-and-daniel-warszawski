@@ -85,7 +85,7 @@ export default class TutorialScene extends Phaser.Scene {
         this.hint = this.add.image(10, this.scale.height / 2 - 60, 'hint');
         this.hint.setScale(.40);
         this.hint.setInteractive();
-        this.hint.on('pointerdown', () => this.giveHint("Click a button", this.scale.width * .7, this.scale.height * .5));
+        this.hint.on('pointerdown', () => this.giveHint("Click correct button", this.scale.width * .7, this.scale.height * .5));
         this.instructions.destroy();
         this.sampleQuestion.setOrigin(0, 0);
         this.submitButton = this.add.image(this.scale.width/2, this.scale.height /2 + 50, 'submitButton');
@@ -110,59 +110,32 @@ export default class TutorialScene extends Phaser.Scene {
 
     giveHint(text, w = 300, h = 300){
         if(this.counter % 2 == 0){
-            //just in case the message box already exists
-            //destroy it
+
             if (this.msgBox) {
                 this.msgBox.destroy();
             }
-            //make a group to hold all the elements
             this.msgBox = this.add.group();
-                //make the back of the message box
             this.back = this.add.image(0, 0, "hintBack");
             this.back.setScale(.1);
-                //make the close button
             this.close = this.add.image(0, 0, "close");
             this.close.setScale(.3);
-                //make a text field
             this.text1 = this.add.text(0, 0, text, {fill : "green"});
-                //set the textfeild to wrap if the text is too long
-        //text1.wordWrap = true;
-            //make the width of the wrap 90% of the width 
-            //of the message box
-        //text1.wordWrapWidth = w * .9;
-            //
-            //
-            //set the width and height passed
-            //in the parameters
+
             this.back.width = w;
             this.back.height = h;
-            //
-            //
-            //
-            //add the elements to the group
+
             this.msgBox.add(this.back);
             this.msgBox.add(this.close);
             this.msgBox.add(this.text1);
-            //
-            //set the close button
-            //in the center horizontally
-            //and near the bottom of the box vertically
+
             this.close.x = this.back.width / 2 - this.close.width / 2;
             this.close.y = this.back.height - this.close.height;
-            //enable the button for input
             this.close.setInteractive();
-            //add a listener to destroy the box when the button is pressed
             this.close.on('pointerdown', () => this.hideBox());
-            //
-            //
-            //set the message box in the center of the screen
-        //this.msgBox.setOrigin(this.scale.width / 2, this.scale.height / 2);
-            //
-            //set the text in the middle of the message box
+
             this.text1.x = this.button0Deg.x - 10;
             this.text1.y = this.button0Deg.y - 35;
-            //make a state reference to the messsage box
-        //this.msgBox = msgBox;
+
         
         }
         else{
@@ -172,7 +145,6 @@ export default class TutorialScene extends Phaser.Scene {
     }
 
     hideBox() {
-            //destroy the box when the button is pressed
         this.msgBox.destroy();
     }
    

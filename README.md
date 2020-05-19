@@ -1,3 +1,11 @@
+Angles Master
+
+This game teaches the important concept of angles to the user through a series of fun and entertaining puzzles. Each puzzle presents a pipe with a missing segment.  The player must correctly rotate the unconnected pipe so that it links the entire pipe together.  Upon selecting the correct angle which the missing pipe piece should be rotated at, the user gets to hear a funny and happy noise.  Answering incorrectly, means that the user will hear a grumpy noise.
+
+
+
+
+
 # educational-phaser-game-template
 
 Template for designing educational Phaser Games

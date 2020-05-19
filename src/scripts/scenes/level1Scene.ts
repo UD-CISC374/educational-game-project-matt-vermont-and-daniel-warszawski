@@ -112,6 +112,29 @@ export default class Level1Scene extends Phaser.Scene {
 
         this.submitButton.on('pointerdown', () => this.buttonPress() );
 
+        this.hint.on('pointerover', () => {this.hint.alpha = .5} );
+        this.hint.on('pointerout', () => {this.hint.alpha = 1} );
+
+        //this.button0Deg.alpha = .5;
+        this.button0Deg.on('pointerover', () => {this.button0Deg.alpha = .5} );
+        this.button0Deg.on('pointerout', () => {this.button0Deg.alpha = 1} );
+
+
+        this.button90Deg.on('pointerover', () => {this.button90Deg.alpha = .5} );
+        this.button90Deg.on('pointerout', () => {this.button90Deg.alpha = 1} );
+
+        this.button180Deg.on('pointerover', () => {this.button180Deg.alpha = .5} );
+        this.button180Deg.on('pointerout', () => {this.button180Deg.alpha = 1} );
+        
+        this.button270Deg.on('pointerover', () => {this.button270Deg.alpha = .5} );
+        this.button270Deg.on('pointerout', () => {this.button270Deg.alpha = 1} );
+
+        this.submitButton.on('pointerover', () => {this.submitButton.alpha = .5} );
+        this.submitButton.on('pointerout', () => {this.submitButton.alpha = 1} );
+
+        this.hint.on('pointerover', () => {this.hint.alpha = .5} );
+        this.hint.on('pointerout', () => {this.hint.alpha = 1} );
+
 
 }
 

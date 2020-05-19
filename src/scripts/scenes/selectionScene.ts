@@ -37,6 +37,8 @@ export default class SelectionScene extends Phaser.Scene {
     this.buttonLevel1 = this.add.image(this.scale.width / 2, this.scale.height / 2 + 75, "buttonLevel1");
     this.buttonLevel1.setScale(.25);
     this.buttonLevel1.setInteractive();
+    this.buttonLevel1.on('pointerover', () => {this.buttonLevel1.alpha = .5} );
+    this.buttonLevel1.on('pointerout', () => {this.buttonLevel1.alpha = 1} );
     this.buttonLevel1.on('pointerdown', () => this.scene.start('Level1Scene', {currentQuestionIndex: 0, numCorrect:0}) );
 
   }   

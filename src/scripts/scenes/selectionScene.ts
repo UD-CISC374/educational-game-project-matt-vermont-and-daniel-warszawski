@@ -22,7 +22,7 @@ export default class SelectionScene extends Phaser.Scene {
     this.background = this.add.image(0, 0, "background");
     this.background.setOrigin(0, 0);
     this.data = this.cache.json.get('questions');
-    this.add.text(20, 20, "Select Level");
+    this.add.text(70, 40, "Angles Master");
    // this.ship1 = this.add.image(this.scale.width / 2 - 50, this.scale.height / 2, "ship");
    if (!this.hasDoneTutorial){ /*if have not done tutorial */
     this.buttonTutorial = this.add.image(this.scale.width / 2, this.scale.height / 2 + 75, "tutorialButton");
@@ -31,6 +31,7 @@ export default class SelectionScene extends Phaser.Scene {
     this.buttonTutorial.on('pointerdown', () => this.scene.start('TutorialScene', {hasDoneTutorial: false} ) ); 
    }
    else {
+    this.add.text(70, this.scale.height / 2, "Select Level");
     this.buttonLevel1 = this.add.image(this.scale.width / 2 - 50, this.scale.height / 2 + 75, "buttonLevel1");
     this.buttonLevel1.setScale(.25);
     this.buttonLevel1.setInteractive();

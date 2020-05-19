@@ -29,6 +29,9 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.audio('game_over', "assets/sounds/sm64_game_over.wav");
     this.load.audio('yippee', "assets/sounds/sm64_mario_yippee.wav");
     this.load.json('questions', 'assets/data/questions.json');  
+    this.load.image('hint', 'assets/hint.jpg')
+    this.load.image('close', 'assets/close.jpg');
+    this.load.image('hintBack', 'assets/hintBack.png');
   }
 
 

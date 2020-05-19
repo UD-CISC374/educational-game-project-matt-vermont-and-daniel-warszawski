@@ -12,6 +12,7 @@ export default class TutorialScene extends Phaser.Scene {
     btn90DegClicked : boolean;
     btn180DegClicked : boolean;
     btn270DegClicked : boolean;
+    allBUttonsClicked : boolean;
     answer: integer;
     instructions;
     hasDoneTutorial : boolean;
@@ -26,6 +27,7 @@ export default class TutorialScene extends Phaser.Scene {
 
     create() {    
         console.log("tutorial");
+        this.hasDoneTutorial = false;
         this.answer = 0;
         this.btn0DegClicked = false;
         this.btn90DegClicked = false;
@@ -69,6 +71,7 @@ export default class TutorialScene extends Phaser.Scene {
   
   buttonDown(){
     if ( this.btn0DegClicked && this.btn90DegClicked && this.btn180DegClicked && this.btn270DegClicked ) {
+        if ( this.hasDoneTutorial == false ) {
         this.sampleQuestion = this.add.image(0,0 , "sampleQuestion");
         this.instructions.destroy();
         this.sampleQuestion.setOrigin(0, 0);
@@ -78,7 +81,9 @@ export default class TutorialScene extends Phaser.Scene {
         this.submitButton.on('pointerdown', () => this.submit() );
         this.add.text(this.scale.width / 100 , 20, "Line up the red sides of", {fontsize:'5px',fill : "red" });
         this.add.text(this.scale.width / 100 , 35, "the pipe and click submit", {fontsize:'5px',fill : "red" });
-    }
+        this.hasDoneTutorial = true;
+        }
+   }
 }  
     submit(){
         if (this.roateDegree == this.answer){

@@ -8,6 +8,11 @@ The player should select the tutorial first.  Going through the tutorial will ge
 
 # large image
   ![Alt text](./assets/screenshots/large.PNG) 
+  ![Alt text](./screenshots/large.PNG)
+  ![Alt text](./screenshots/large.png)
+  ![Alt text](./assets/screenshots/large.PNG)
+    ![Alt text](./src/assets/screenshots/large.PNG)
+  ![Alt text](./screenshots/large.PNG)
 # educational-phaser-game-template
 
 Template for designing educational Phaser Games

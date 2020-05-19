@@ -7,13 +7,7 @@ This game teaches the important concept of angles to the user through a series o
 The player should select the tutorial first.  Going through the tutorial will get the user comfortable with the gameplay.  After completing the tuorial the user is ready for level 1.  The user should click the 0, 90, 180 or 270 button in order to orient the missing pipe piece in the desired way and then click submit.
 
 # large image
-
-  ![Alt text](./assets/screenshots/large.PNG)
-    ![Alt text](./src/assets/screenshots/large.PNG)
-  ![Alt text](./screenshots/large.PNG)
- 
- 
-Format: ![Alt Text](url)
+  ![Alt text](./assets/screenshots/large.PNG) 
 # educational-phaser-game-template
 
 Template for designing educational Phaser Games

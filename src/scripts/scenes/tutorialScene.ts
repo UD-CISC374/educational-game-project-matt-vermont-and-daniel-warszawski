@@ -50,7 +50,7 @@ export default class TutorialScene extends Phaser.Scene {
         this.hint = this.add.image(10, this.scale.height / 2 - 60, 'hint');
         this.hint.setScale(.40);
         this.hint.setInteractive();
-        this.hint.on('pointerdown', () => this.giveHint("Click a button below", this.scale.width * .7, this.scale.height * .5));
+        this.hint.on('pointerdown', () => this.giveHint("Click each button below", this.scale.width * .7, this.scale.height * .5));
 
         this.button0Deg = this.add.image(15, this.scale.height / 2 + 110, "zeroDegreeButton");
         this.button0Deg.setScale(.5);
@@ -95,11 +95,10 @@ export default class TutorialScene extends Phaser.Scene {
         this.add.text(this.scale.width / 100 , 20, "Line up the red sides of", {fontsize:'5px',fill : "red" });
         this.add.text(this.scale.width / 100 , 35, "the pipe and click submit", {fontsize:'5px',fill : "red" });
         this.hasDoneTutorial = true;
-    }
         this.roatePipe.destroy();
         this.roatePipe = this.add.image(this.scale.width - 85, this.scale.height / 2 - 25, "pipeWithRing");
         this.roatePipe.setScale(.087); 
-
+    }
     }
 }  
     submit(){
